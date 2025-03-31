@@ -22,14 +22,14 @@ public class Main {
         int[] result = new int [n+1];
         result[0] = 0;
         result[1] = 1;
-        for(int i = 2; i < n; i ++){
+        for(int i = 2; i <= n; i ++){
             result[i] = result[i-1] + result[i-2];
         }
-        return result[n - 1];
+        return result[n];
     }
 
     public static int memoizedFibo(int []f, int n){
-        for(int i = 0; i < n; i ++){
+        for(int i = 0; i <= n; i ++){
             f[i] = -1;
         }
         return lookUpFibo(f, n);
